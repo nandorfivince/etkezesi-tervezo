@@ -8,7 +8,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  z-index: 1000; /* Biztosítja, hogy a modal az összes többi elem felett jelenjen meg */
+  z-index: 1000;
 }
 
 .modal-content {
@@ -18,47 +18,47 @@
   padding: 20px;
   border: 2px solid white;
   border-radius: 5px;
-  width: 650px; /* Szélesség megtartása */
-  height: auto; /* Automatikus magasság a tartalom alapján */
-  max-height: 90vh; /* A modal maximális magasságának korlátozása */
+  width: 650px;
+  height: auto;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start; /* Tartalom tetejére igazítása */
-  align-items: flex-start; /* Tartalom bal oldalra igazítása */
+  justify-content: flex-start;
+  align-items: flex-start;
   text-align: left;
-  overflow-y: auto; /* Görgetősáv megjelenítése szükség esetén */
+  overflow-y: auto;
 }
 
 .close-button {
   position: absolute;
-  top: 10px; /* Pozíció a modal tetejétől */
-  right: 10px; /* Pozíció a modal jobb szélétől */
-  background: transparent; /* Átlátszó háttér */
-  border: none; /* Nincs keret */
-  color: white; /* Fehér szöveg */
-  font-size: 20px; /* Nagyság */
-  cursor: pointer; /* Mutató kurzor */
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
 }
 
 .save-button {
-  background-color: black; /* Fekete háttér */
-  color: white; /* Fehér szöveg */
+  background-color: black;
+  color: white;
   border: none;
-  padding: 10px 20px; /* Padding beállítása */
-  font-size: 16px; /* Betűméret beállítása */
-  cursor: pointer; /* Mutató kurzor beállítása */
-  border-radius: 5px; /* Keret lekerekítése */
-  position: absolute; /* Abszolút pozicionálás a modalon belül */
-  bottom: 20px; /* A modal aljától való távolság */
-  right: 20px; /* A modal jobb szélétől való távolság */
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px; 
+  right: 20px;
 }
 
 .save-button:hover, .close-button:hover {
-  color: blue; /* Kék szöveg a mentés és bezárás gombokon hover állapotban */
+  color: blue;
 }
 
 .form-group {
-  width: 500px; /* Használja ki a modal szélességét */
+  width: 500px;
   margin-bottom: 10px;
 }
 
@@ -69,7 +69,7 @@
 
 .form-group input[type="text"],
 .form-group input[type="number"] {
-  width: 100%; /* A mezők szélessége teljesen kitölti a form-group-ot */
+  width: 100%;
   padding: 8px;
   background-color: black;
   color: white;
@@ -79,5 +79,5 @@
 
 .form-group input[type="text"]:hover,
 .form-group input[type="number"]:hover {
-  border-color: blue; /* Kék keret hover állapotban */
+  border-color: blue;
 }

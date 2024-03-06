@@ -139,7 +139,6 @@ function App() {
         }
       });
       console.log(soupResponse.data.choices[0].message.content)
-      // fetchSoup(suggestionsResponse.data.choices[0].message.content);
       setContent(soupResponse.data.choices[0].message.content);
     } catch (error) {
       console.error('Hiba történt a javaslatok lekérdezése közben', error);
@@ -171,7 +170,6 @@ function App() {
         }
       });
       console.log(mainDishResponse.data.choices[0].message.content)
-      // fetchMainDish(mainDishResponse.data.choices[0].message.content);
       setContent(mainDishResponse.data.choices[0].message.content);
     } catch (error) {
       console.error('Hiba történt a javaslatok lekérdezése közben', error);
@@ -201,7 +199,6 @@ function App() {
         }
       });
       console.log(dessertResponse.data.choices[0].message.content)
-      // fetchDessert(dessertResponse.data.choices[0].message.content);
       setContent(dessertResponse.data.choices[0].message.content);
     } catch (error) {
       console.error('Hiba történt a javaslatok lekérdezése közben', error);
