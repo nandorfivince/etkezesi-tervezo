@@ -25,17 +25,17 @@ Ez a kulcs szükséges az alkalmazás működéséhez.
 
 - Az alkalmazás nem tárolja az adatokat hosszú távon, tehát minden oldalfrissítés vagy újranyitás után újra be kell állítani a profilokat.
 - Ha az API válasza nem megfelelő, próbálkozzon újra a profil kiválasztásával és az ételjavaslatok generálásával.
-- Ha a UI undorítóan jelenik meg zoom-olgass ki/be addig amíg értelmes elrendezésbe kerül :D .
+- Ha a UI undorítóan jelenik meg zoom-olgasson ki/be addig amíg értelmes elrendezésbe kerül :D .
 
 ## Telepítés és Indítás
 
-A projektet letöltheti a GitHub-ról. A forráskód módosításához és a fejlesztéshez ajánlott a Visual Studio Code használata.
+A projektet letöltheti a GitHub-ról. A forráskód módosításához, futtatásához és a fejlesztéshez ajánlott a Visual Studio Code használata.
 
 A telepítéshez és az alkalmazás helyi szerveren való futtatásához kövesse az alábbi lépéseket:
 
 ```bash
-git clone https://github.com/your-username/your-project-name.git
-cd your-project-name
+git clone git@github.com:nandorfivince/etkezesi-tervezo.git
+cd etkezesi-tervezo
 npm install
 npm start
 ```
