@@ -1,0 +1,273 @@
+/*==============================App============================================*/
+.App {
+  text-align: center;
+  display: flex;
+  min-height: 100vh;
+  background-color: #000;
+}
+/*==============================left-sidebar============================================*/
+.left-sidebar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 400px;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  height: 100vh;
+  z-index: 10;
+}
+
+/*==============================profile-section============================================*/
+/* Profilnév és hozzáadás gomb hover stílusa */
+.profile-name:hover, .add-profile-button:hover {
+  color: blue;
+}
+
+/* Gomb alaphelyzet stílusa */
+.add-profile-button, .profile-name, .question {
+  color: white;
+  transition: color 0.3s ease;
+}
+
+/* Gomb hover stílusa */
+.add-profile-button:hover, .profile-name:hover {
+  color: blue;
+  cursor: pointer;
+}
+
+.profile-section {
+  text-align: left;
+}
+
+.profile-header {
+  margin-bottom: 10px;
+}
+
+.add-profile-button {
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  width: 100%;
+  display: block;
+  margin-bottom: 10px;
+}
+
+.profiles-list {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.profile-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 5px;
+}
+
+.profile-name {
+  cursor: pointer;
+  flex-grow: 1; /* Töltse ki a rendelkezésre álló helyet */
+}
+
+.fa-edit,
+.fa-trash {
+  cursor: pointer;
+  margin-left: 10px;
+}
+/*==============================main-content============================================*/
+.main-content {
+  flex-grow: 1;
+  margin-left: 300px; /* Bal oldalsáv szélességének megfelelően */
+  margin-right: 300px; /* Jobb oldalsáv szélességének megfelelően */
+  display: flex;
+  flex-direction: column;
+  background-color: #000; /* Fekete háttér */
+}
+
+.main-header {
+  background-color: #000;
+  padding: 20px;
+}
+
+.title {
+  color: white;
+  margin-bottom: 30px;
+}
+/*==============================suggestions-section============================================*/
+.profile-item.selected {
+  color: blue; /* Vagy bármilyen stílus, amit szeretnél alkalmazni */
+}
+
+.question {
+  cursor: pointer;
+  font-size: 3em;
+  margin: 0 0 30px 0;
+  color: white;
+  text-align: center;
+}
+
+.question:hover {
+  color: blue;
+}
+
+.suggestions-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 20px;
+  background-color: #000;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.box {
+  width: 300px;
+  height: 300px;
+  border: 2px solid white;
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.suggestions-box {
+  width: calc(300px * 3 + 10px * 13); /* Adjust based on padding and actual layout */
+  height: 400px;
+  border: 2px solid white;
+  margin: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+/*==============================right-sidebar============================================*/
+.right-sidebar {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 600px;
+  background-color: #000;
+  color: white;
+  padding: 10px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.tall-box {
+  width: 80%; /* vagy a kívánt szélesség */
+  max-width: 600px; /* vagy a kívánt maximális szélesség */
+  height: 65vh; /* vagy a kívánt magasság */
+  background-color: #000; /* fekete háttér */
+  color: white;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center; /* középre igazítja a belső tartalmat vízszintesen */
+  align-items: center;
+}
+
+/* Hover effects */
+.box:hover,
+.suggestions-box:hover,
+.tall-box:hover {
+  border-color: blue;
+}
+/*==============================Modal============================================*/
+.modal-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  position: relative;
+  background-color: black;
+  color: white;
+  padding: 20px;
+  border: 2px solid white;
+  border-radius: 5px;
+  width: 650px;
+  height: auto;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  text-align: left;
+  overflow-y: auto;
+}
+
+.close-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.save-button {
+  background-color: black;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+  position: absolute;
+  bottom: 20px;
+  right: 20px;
+}
+
+.save-button:hover,
+.close-button:hover {
+  color: blue;
+}
+
+.form-group {
+  width: 500px;
+  margin-bottom: 10px;
+}
+
+.form-group label {
+  margin-bottom: 5px;
+  display: block;
+}
+
+.form-group input[type="text"],
+.form-group input[type="number"] {
+  width: 100%;
+  padding: 8px;
+  background-color: black;
+  color: white;
+  border: 1px solid white;
+  margin-bottom: 10px;
+}
+
+.form-group input[type="text"]:hover,
+.form-group input[type="number"]:hover {
+  border-color: blue;
+}
